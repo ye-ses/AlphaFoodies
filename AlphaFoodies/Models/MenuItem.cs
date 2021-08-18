@@ -20,11 +20,11 @@ namespace AlphaFoodies.Models
 
         [Required]
         [StringLength(50)]
-        public string Iten_Name { get; set; }
+        public string Item_Name { get; set; }
 
         [Required]
         public string Description { get; set; }
-
+       
         public decimal Price { get; set; }
 
         [Required]
