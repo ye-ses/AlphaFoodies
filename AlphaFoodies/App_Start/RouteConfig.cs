@@ -16,7 +16,7 @@ namespace AlphaFoodies
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Admin", action = "AddMenuItem", id = UrlParameter.Optional}
             );
         }
     }
