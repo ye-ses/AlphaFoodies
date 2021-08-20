@@ -22,9 +22,10 @@ namespace AlphaFoodies.Models
         [StringLength(50)]
         public string Item_Name { get; set; }
 
+        [Column(TypeName = "text")]
         [Required]
         public string Description { get; set; }
-       
+
         public decimal Price { get; set; }
 
         [Required]

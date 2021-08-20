@@ -8,7 +8,7 @@ namespace AlphaFoodies.Models
     public partial class ModelContext : DbContext
     {
         public ModelContext()
-            : base("name=AlphaDB")
+            : base("name=ModelContextDB")
         {
         }
 
@@ -43,8 +43,12 @@ namespace AlphaFoodies.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<MenuItem>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MenuItem>()
                 .Property(e => e.Price)
-                .HasPrecision(2, 0);
+                .HasPrecision(5, 2);
 
             modelBuilder.Entity<MenuItem>()
                 .HasMany(e => e.OrderItems)
@@ -57,7 +61,7 @@ namespace AlphaFoodies.Models
 
             modelBuilder.Entity<Order>()
                 .Property(e => e.Order_Total)
-                .HasPrecision(2, 0);
+                .HasPrecision(5, 2);
 
             modelBuilder.Entity<Order>()
                 .Property(e => e.Order_PrepTime)
