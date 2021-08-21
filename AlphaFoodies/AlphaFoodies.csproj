@@ -183,6 +183,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Admin_Layout.cshtml" />
     <Content Include="Views\Admin\AddMenuItem.cshtml" />
+    <Content Include="Views\Admin\ViewMenu.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

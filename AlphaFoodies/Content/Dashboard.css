@@ -3,10 +3,12 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing:border-box;
 }
 body {
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh
+    min-height: 100vh;
+    background: #FFFFFF;
 }
 
 .logo-content
@@ -26,7 +28,7 @@ textarea {
     left: 0;
     width: 260px;
     height: 100%;
-    background: #2f353f;
+    background: rgba(229, 110, 94, 0.38);
     padding: 6px;
     color: #b8c7ce;
     transition: all 0.7s ease;

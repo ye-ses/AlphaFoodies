@@ -30,5 +30,12 @@ namespace AlphaFoodies.Controllers
             return View();
         }
 
+        /*View menu items, action methods*/
+
+        public ActionResult ViewMenu()
+        {
+            return View(model.MenuItems.ToList());
+        }
+
     }
 }
