@@ -10,11 +10,10 @@ body {
     min-height: 100vh;
     background: #FFFFFF;
 }
-
-.logo-content
-{
-  
- 
+.body-content-Admin{
+    margin-left:15px;
+}
+.logo-content {
 }
 input,
 select,
