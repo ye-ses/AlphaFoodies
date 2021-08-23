@@ -17,19 +17,22 @@
     transition: all 0.7s ease;
 }
 
-    .side-bar-nav.active {
+.side-bar-nav.active 
+{
         width: 110px;
         font-size: 26px;
-    }
+  }
 
-        .side-bar-nav.active .logo-content h3, .side-bar-nav.active .nav-item a .item-name, .side-bar-nav.active .user-profile {
+ .side-bar-nav.active .logo-content h3, .side-bar-nav.active .nav-item a .item-name, .side-bar-nav.active .user-profile 
+ {
             opacity: 0;
-        }
+ }
 
-        .side-bar-nav.active .nav-item:hover {
+.side-bar-nav.active .nav-item:hover
+{
             border-radius: 50%;
             width: 60%;
-        }
+}
 /*i
 {
     font-size:30px;
