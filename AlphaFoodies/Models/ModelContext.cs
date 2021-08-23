@@ -34,10 +34,6 @@ namespace AlphaFoodies.Models
                 .IsFixedLength();
 
             modelBuilder.Entity<Chef>()
-                .Property(e => e.Image)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Chef>()
                 .HasMany(e => e.Orders)
                 .WithRequired(e => e.Chef)
                 .WillCascadeOnDelete(false);
