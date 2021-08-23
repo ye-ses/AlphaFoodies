@@ -4,6 +4,7 @@
     ViewBag.Title = "ViewMenu";
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
     <link href="~/Content/Admin.css" rel="stylesheet" />
+    
 }
 
 <h2>ViewMenu</h2>
@@ -14,24 +15,22 @@
     {
         var image_Source = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(menuItem.Picture));
         var alt_Text = menuItem.Item_Name;
-        <div class="item-container col-md-6">
+    <div class="item-container col-md-6">
 
-            <div class="imageContainer">
-                <img src="@image_Source" id="actual_Picture" alt="@alt_Text" />
-            </div>
-
-            <div class="item_text">
-                <span class="item_name">@menuItem.Item_Name</span>
-                <span class="Item_discription">@menuItem.Description</span>
-                <span class="price">R @menuItem.Price</span>
-            </div>
-
-            <div class="_icons">
-                <i class='bx bxs-trash-alt' id="trash_icon" ></i>
-                <i class='bx bxs-pencil'id="pencil_icon"></i>
-            </div>
-
+        <div class="imageContainer">
+            <img src="@image_Source" id="actual_Picture" alt="@alt_Text" />
         </div>
+        <div class="item_text">
+            <span class="item_name">@menuItem.Item_Name</span>
+            <span class="Item_discription">@menuItem.Description</span>
+            <span class="price">R @menuItem.Price</span>
+        </div>
+
+        <div class="_icons">
+            <i class='bx bxs-trash-alt' id="trash_icon"></i>
+            <i class='bx bxs-pencil' id="pencil_icon"></i>
+        </div>
+    </div>
     }
 
 </div>
