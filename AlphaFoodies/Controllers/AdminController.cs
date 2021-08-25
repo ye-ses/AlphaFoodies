@@ -13,11 +13,13 @@ namespace AlphaFoodies.Controllers
         private  ModelContext model = new ModelContext();
         
         [HttpGet]
+        [OutputCache(Duration = 0)]
         public ActionResult AddMenuItem()
         {
             return View();
         }
         [HttpPost]
+        [OutputCache(Duration = 0)]
         public ActionResult AddMenuItem(MenuItem newItem, HttpPostedFileBase thePicture)
         {
             if (thePicture != null)
@@ -39,12 +41,14 @@ namespace AlphaFoodies.Controllers
         }
 
         [HttpGet]
+        [OutputCache(Duration = 0)]
         public ActionResult add_Staff()
         {
             return View();
         }
 
         [HttpPost]
+        [OutputCache(Duration = 0)]
         public ActionResult add_Staff(HttpPostedFileBase thePicture)
         {
             var firstname = Request.Form["firstname"];

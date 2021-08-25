@@ -11,9 +11,9 @@
     left: 0;
     width: 260px;
     height: 100%;
-    background: black;
+    background: rgba(229, 110, 94, 0.4);
     padding: 6px;
-    color: #444648;
+    color:#444648;
     transition: all 0.7s ease;
 }
 
