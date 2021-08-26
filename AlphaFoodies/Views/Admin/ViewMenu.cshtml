@@ -4,31 +4,29 @@
     ViewBag.Title = "ViewMenu";
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
     <link href="~/Content/Admin.css" rel="stylesheet" />
-    
 }
 <h2>ViewMenu</h2>
-<div class="view_menu_container container">
-
+<div class="view_menu_container">
     @foreach (var menuItem in Model)
     {
         var image_Source = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(menuItem.Picture));
         var alt_Text = menuItem.Item_Name;
-    <div class="item-container col-md-6">
+        if (menuItem.Picture != null)
+        {
+            <div class="card" style="width: 25rem; margin-right:10px;">
+                <img class="card-img-top" src="@image_Source" alt="@alt_Text" width="100%" height="200px" />
 
-        <div class="imageContainer">
-            <img src="@image_Source" id="actual_Picture" alt="@alt_Text" />
-        </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center bol">@menuItem.Item_Name</h5>
 
-        <div class="item_text">
-            <span class="item_name">@menuItem.Item_Name</span>
-            <span class="Item_discription">@menuItem.Description</span>
-            <span class="price">R @menuItem.Price</span>
-        </div>
+                    <p class="card-text">@menuItem.Description</p>
+                    <div class="bottom">
+                        <i class='bx bxs-trash-alt' id="trash_icon"></i>
+                        <i class='bx bxs-pencil' id="pencil_icon"></i>
+                    </div>
 
-        <div class="_icons">
-            <i class='bx bxs-trash-alt' id="trash_icon"></i>
-            <i class='bx bxs-pencil' id="pencil_icon"></i>
-        </div>
-    </div>
-}
-</div>
+                </div>
+
+            </div>
+        }
+    }
