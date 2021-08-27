@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="~/Content/Customer.css" rel="stylesheet" />
+    <script src="~/Scripts/Customer.js"></script>
+</head>
+<body>
+    <div id="logo-container">
+        <img src="~/Images/logo.png" id="logo" />
+        <img src="~/Images/logo-context.png" id="logo-words" />
+        <i class='bx bx-exit' id="exit-icon"></i>  
+        <button class="btn" id="logout">exit.</button>
+    </div> 
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
