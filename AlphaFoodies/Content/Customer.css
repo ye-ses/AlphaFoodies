@@ -1,0 +1,135 @@
+﻿* {
+    padding: 0;
+    margin: 0; 
+    margin-top:0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh
+}
+.btn {
+    background-color: #d55c5c;
+    color: white;
+    font-family: Montaga;
+    padding: 3px 8px 3px 8px;
+} 
+#logo {
+    width: 65px;
+    height: 90px;
+    margin-left: 20px;
+} 
+#logo-words {
+    margin-left: 30%;
+    margin-right: 15px;
+    margin-top:24px;
+    height: 40px;
+}
+#exit-icon{
+    font-size: 40px;
+    margin-left: 360px;   
+    margin-top:25px; 
+    opacity:0.5;
+}
+#exit-icon:hover{
+    margin-top:20px;
+    font-size:45px;
+}
+#logout {
+    margin-left: -20px;
+    margin-top: 17px; 
+    padding:0px;
+    height: 20px;
+    font-size: 18px; 
+    border: 2px solid white; 
+    opacity:0.9;
+} 
+
+#logo-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    background-color: #E56E5E;
+    border: 2px solid #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search-container {
+    margin-left: 72%;
+    margin-top: 15px;
+    height: 30px;
+    width: 295px; 
+    display:block;
+}
+#search-box {
+    width: 250px;
+    height: 30px; 
+    padding-left: 15px;  
+    border: 2px solid #e56e5e; 
+}
+#search-box:active{
+    border:0px;
+}
+#search-icon {
+    font-size: 24px;
+    height: 30px;
+    width: 30px;
+    margin-left: 2px;  
+}
+#search-icon:hover{    
+    height:40px;
+}
+.view_menu_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-container {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    width: 260px;
+    height: 380px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.25);
+    padding: 15px 15px;
+    align-content:center;
+}
+
+.imageContainer {
+    width: 230px;
+    height: 230px;
+}
+
+#actual_Picture {
+    width: 100%;
+    height: 100%;
+}
+
+.item_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #000000;
+    font-family: Poppins; 
+}
+
+.item_name {
+    line-height: 22px;
+    font-family: Montaga;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.price {
+    font-family: Montaga;
+    line-height: 22px; 
+}
+#add-to-cart-btn {
+    margin-left: 35%;
+}
+#add-to-cart-btn:hover{ 
+    color:white;
+    width:35%px;
+}

@@ -1,0 +1,37 @@
+﻿
+@model IEnumerable<AlphaFoodies.Models.MenuItem>
+
+@{
+    ViewBag.Title = "ViewMenu";
+    Layout = "~/Views/Shared/Customer_Layout.cshtml"; 
+}
+
+<div class="search-container">
+    <input type="text" id="search-box" placeholder="enter text" border="0"/> 
+    <i class='bx bx-search-alt' id="search-icon"></i> 
+</div>
+<br />
+<div class="view_menu_container container">
+
+    @foreach (var menuItem in Model)
+    {
+        var image_Source = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(menuItem.Picture));
+        var alt_Text = menuItem.Item_Name;
+        <div class="item-container ">
+
+            <div class="imageContainer">
+                <img src="@image_Source" id="actual_Picture" alt="@alt_Text" width:80px height:80px />
+            </div>
+            <br />
+            <div class="item_text">
+                <p class="item_name">@menuItem.Item_Name</p>
+                <p class="price">R @menuItem.Price</p>
+            </div>
+            <div class="btn-container">
+                <button class="btn" id="add-to-cart-btn" type="button">Add to cart</button>
+            </div>
+
+        </div>
+    }
+
+</div>
