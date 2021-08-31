@@ -1,75 +1,127 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/chef.css")
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="~/Content/Dashboard.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="side-bar-nav">
+        <div class="logo-content">
+            <h3>Alpha Foodies</h3>
+            <i class='bx bx-menu menu-btn' id="toggleBtn" onclick="toggle()"></i>
+        </div>
+        <hr class="dl-horizontal" />
+        <div class="navigation">
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-home'></i>
+                    <span class="item-name">Dashboard</span>
+                </a>
 
-    <div class="page">
-        <header class="flexcon">
-            <article id="flex0">
-               
-            </article>
-            <article id="flex1">    
-                <br />
-               <h3>Chef</h3>
-                <br />
-            </article>
-            <article id="flex2">
-                <br />
-                <i class='bx bxs-user'></i>
-            </article>
+                <span class="tool-tip">Dashboard</span>
+            </div>
 
-        </header>
-        <section class="flexcon2">
-            <article id="flex21">
-                <div class="dnav">
-                    <i class='bx bx-calendar-alt'></i>
-                    @Html.ActionLink("dashboard", "dash", "ChefController",new { @style = "font-size:x-large;color:black;" })
-                </div>
-                <br />
-                <div class="dnav">
-                    <i class='bx bxs-file'></i> @Html.ActionLink("orders", "ord", "ChefController",new { @style = "font-size:x-large;color:black;" })
-                </div>
-                <br />
-                <div class="dnav">
-                    <i class='bx bxs-file'></i>  @Html.ActionLink("order history", "History", "ChefController",new { @style = "font-size:x-large;color:black;" })
-                </div>
-                <br />
-                <div class="dnav">
-                    <i class='bx bxs-user'></i>  @Html.ActionLink("profile", "profile", "ChefController",new { @style = "font-size:x-large;color:black;" })
-                </div>
-                <br />
-                <div class="dnav">
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-user-plus'></i>
+                    <span class="item-name">Add staff</span>
+                </a>
+                <span class="tool-tip">add a new staff member</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-notepad'></i>
+                    <span class="item-name">View chefs</span>
+                </a>
+                <span class="tool-tip">view chefs</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-food-menu'></i>
+                    <span class="item-name">Menu</span>
+                </a>
+                <span class="tool-tip">check menu</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-add-to-queue'></i>
+                    <span class="item-name">Add menu item</span>
+                </a>
+                <span class="tool-tip">add a new menu item</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-cart'></i>
+                    <span class="item-name">Order history</span>
+                </a>
+                <span class="tool-tip">view order history</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="item-name">Profile</span>
+                </a>
+                <span class="tool-tip">check profile</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                    <span class="item-name">Notifications</span>
+                </a>
+                <span class="tool-tip">notifications</span>
+            </div>
+
+            <div class="nav-item">
+                <a href="#">
                     <i class='bx bx-cog'></i>
-                    @Html.ActionLink("settings", "settings", "ChefController",new { @style = "font-size:x-large;color:black;" })
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <div class="dnav">
-                    <i class='bx bx-log-out'></i>
-                    @Html.ActionLink("logout", "out", "HomeController",new { @style = "font-size:x-large;color:black;" })
-                </div>
-            </article>
-            <article id="flex22">
-                @RenderBody()
-            </article>
-        </section>
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+                    <span class="item-name">Settings</span>
+                </a>
+                <span class="tool-tip">Settings</span>
+            </div>
 
+            <!--<div class="nav-item">
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="item-name">logout</span>
+                </a>-->
+            @*<span class="tool-tip"></span>*@
+            <!--</div>-->
+            <!--<div class="user-profile">
+                <div class="nav-item">
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="item-name">logout</span>
+                    </a>-->
+            @*<span class="tool-tip"></span>*@
+            <!--</div>
+                <div class="user-details">
+                    <h4>Nonelela Cele (Admin)</h4>
+                    <div class="image"></div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        @*<hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/DashboardStript.js"></script>
 </body>
 </html>
