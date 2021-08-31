@@ -32,7 +32,9 @@
     padding: 15px 15px;
 }
 
-
+.modal-lg {
+    max-width: 80% !important;
+}
 
 .item_text {
     display: flex;

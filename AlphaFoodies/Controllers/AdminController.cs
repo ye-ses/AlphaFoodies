@@ -101,20 +101,27 @@ namespace AlphaFoodies.Controllers
         }
 
         [HttpGet]
-        public ActionResult deleteItem(int id)
+        public ActionResult deleteMenuItem(int? id)
         {
-            String query="SELECT * WHERE Item_Code="+id;
-            return PartialView(model.MenuItems.SqlQuery(query).Single());
+            MenuItem curItem = model.MenuItems.Where(x => x.Item_Code == id).Single();
+            return PartialView(curItem);
         }
 
-        [HttpPost,ActionName("deleteItem")]
+        [HttpPost,ActionName("deleteMenuItem")]
         [ValidateAntiForgeryToken]
-        public  ActionResult deleteMenuItem(int id)
+        public  ActionResult deleteMenuItemPost(int? id)
         {
+            if (id == null)
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+
             MenuItem curItem = model.MenuItems.Find(id);
+
+            if (curItem == null)
+                return HttpNotFound();
+
             model.MenuItems.Remove(curItem);
             model.SaveChanges();
-            return View("ViewMenu");
+            return Json(true, JsonRequestBehavior.AllowGet);
         }
     }
 }
