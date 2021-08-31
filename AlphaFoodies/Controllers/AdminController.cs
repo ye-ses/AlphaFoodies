@@ -92,5 +92,29 @@ namespace AlphaFoodies.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult details(int id)
+        {
+            MenuItem menuItem = model.MenuItems.Where(x=>x.Item_Code==id).Single();
+            return PartialView(menuItem);
+        }
+
+        [HttpGet]
+        public ActionResult deleteItem(int id)
+        {
+            String query="SELECT * WHERE Item_Code="+id;
+            return PartialView(model.MenuItems.SqlQuery(query).Single());
+        }
+
+        [HttpPost,ActionName("deleteItem")]
+        [ValidateAntiForgeryToken]
+        public  ActionResult deleteMenuItem(int id)
+        {
+            MenuItem curItem = model.MenuItems.Find(id);
+            model.MenuItems.Remove(curItem);
+            model.SaveChanges();
+            return View("ViewMenu");
+        }
     }
 }
