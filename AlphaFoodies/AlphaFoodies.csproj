@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -151,6 +152,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chef.css" />
     <Content Include="Content\Dashboard.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -186,6 +188,11 @@
     <Content Include="Views\Admin\AddMenuItem.cshtml" />
     <Content Include="Views\Admin\ViewMenu.cshtml" />
     <Content Include="Views\Admin\add_Staff.cshtml" />
+    <Content Include="Views\Shared\chef_Layout.cshtml" />
+    <Content Include="Views\Chef\login.cshtml" />
+    <Content Include="Views\Chef\profile.cshtml" />
+    <Content Include="Views\Chef\History.cshtml" />
+    <Content Include="Views\Chef\settings.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
