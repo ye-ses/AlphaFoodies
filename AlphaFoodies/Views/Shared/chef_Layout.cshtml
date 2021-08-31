@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/chef.css")
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="page">
+        <header class="flexcon">
+            <article id="flex0">
+               
+            </article>
+            <article id="flex1">    
+                <br />
+               <h3>Chef</h3>
+                <br />
+            </article>
+            <article id="flex2">
+                <br />
+                <i class='bx bxs-user'></i>
+            </article>
+
+        </header>
+        <section class="flexcon2">
+            <article id="flex21">
+                <div class="dnav">
+                    <i class='bx bx-calendar-alt'></i>
+                    @Html.ActionLink("dashboard", "dash", "ChefController",new { @style = "font-size:x-large;color:black;" })
+                </div>
+                <br />
+                <div class="dnav">
+                    <i class='bx bxs-file'></i> @Html.ActionLink("orders", "ord", "ChefController",new { @style = "font-size:x-large;color:black;" })
+                </div>
+                <br />
+                <div class="dnav">
+                    <i class='bx bxs-file'></i>  @Html.ActionLink("order history", "History", "ChefController",new { @style = "font-size:x-large;color:black;" })
+                </div>
+                <br />
+                <div class="dnav">
+                    <i class='bx bxs-user'></i>  @Html.ActionLink("profile", "profile", "ChefController",new { @style = "font-size:x-large;color:black;" })
+                </div>
+                <br />
+                <div class="dnav">
+                    <i class='bx bx-cog'></i>
+                    @Html.ActionLink("settings", "settings", "ChefController",new { @style = "font-size:x-large;color:black;" })
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="dnav">
+                    <i class='bx bx-log-out'></i>
+                    @Html.ActionLink("logout", "out", "HomeController",new { @style = "font-size:x-large;color:black;" })
+                </div>
+            </article>
+            <article id="flex22">
+                @RenderBody()
+            </article>
+        </section>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
