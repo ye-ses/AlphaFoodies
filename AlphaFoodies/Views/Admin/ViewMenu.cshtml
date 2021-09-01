@@ -13,14 +13,15 @@
         var alt_Text = menuItem.Item_Name;
         if (menuItem.Picture != null)
         {
-            <div class="card" style="width: 20rem; margin-right:10px;" onclick="createModal('@Url.Action("details", "Admin" , new {id=menuItem.Item_Code})')">
+            <div class="card" style="width: 20rem; margin-right:10px;">
                 <img class="card-img-top" src="@image_Source" alt="@alt_Text" width="100%" height="200px" />
                 <div class="card-body">
                     <h5 class="card-title text-center bol">@menuItem.Item_Name</h5>
 
                     <p class="card-text">@menuItem.Description</p>
                     <div class="bottom">
-                        <i class='bx bxs-trash-alt' id="trash_icon"></i>
+                        @*<i class='bx bxs-trash-alt' id="trash_icon"></i>*@
+                        <input type="button" class="btn btn-danger" value="delete" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" /> 
                         <i class='bx bxs-pencil' id="pencil_icon"></i>
                     </div>
                 </div>
@@ -28,13 +29,12 @@
         }
     }
 </div>
-<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
     <div class="modal-dialog">
         <div class="modal-content" id="modelContent">
         </div>
     </div>
 </div>
-
 
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script> @*/*Lib*/*@
