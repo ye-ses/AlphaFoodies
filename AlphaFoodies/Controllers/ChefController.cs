@@ -19,7 +19,6 @@ namespace AlphaFoodies.Controllers
 
         // POST: security/Create
         [HttpPost]
-
         public ActionResult login([Bind(Exclude = "Id")] Chef UP)
         {
 
