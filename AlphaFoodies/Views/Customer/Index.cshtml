@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<AlphaFoodies.Models.MenuItem>
+﻿@model IEnumerable<AlphaFoodies.Models.MenuItem>
 
 @{
     ViewBag.Title = "ViewMenu";
@@ -17,7 +16,7 @@
 }
 
 <br />
-@if (@Model.Count() != 0)
+@if (TempData["notFound"] == null)
 {
     if (ViewBag.text == null || ViewBag.text == "")
     {
@@ -75,9 +74,35 @@
 }
 else
 {
-    <p>@ViewBag.notfound</p>
+<div >
+    <p id="not-found">@TempData["notFound"]</p>
+</div>
+
+    <div class="view_menu_container">
+
+        @foreach (var menuItem in Model)
+        {
+            var image_Source = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(menuItem.Picture));
+            var alt_Text = menuItem.Item_Name;
+            <div class="item-container ">
+
+                <div class="imageContainer">
+                    <img src="@image_Source" id="actual_Picture" alt="@alt_Text" width:80px height:80px />
+                </div>
+                <br />
+                <div class="item_text">
+                    <p class="item_name">@menuItem.Item_Name</p>
+                    <p class="price">R @menuItem.Price</p>
+                </div>
+                <div class="btn-container">
+                    <button class="btn" id="add-to-cart-btn" type="button">Add to cart</button>
+                </div>
+
+            </div>
+        }
+    </div>
 }
-<div class"btn" id="view-cart-container" >
-    <span id="view-cart">View Cart</span><span><i class='bx bx-cart' id="cart-icon"></i></span>
+<div class"btn" id="view-cart-container">
+    <span id="view-cart"></span>View  Cart<span><i class='bx bx-cart' id="cart-icon"></i></span>
 </div>
 
