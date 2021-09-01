@@ -21,8 +21,8 @@
                     <p class="card-text">@menuItem.Description</p>
                     <div class="bottom">
                         @*<i class='bx bxs-trash-alt' id="trash_icon"></i>*@
-                        <input type="button" class="btn btn-danger" value="delete" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" /> 
-                        <i class='bx bxs-pencil' id="pencil_icon"></i>
+                        <input type="button" class="btn btn-danger" style="border-radius:23px;width:100px" value="delete" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
+                        <input type="button" class="btn btn-success" style="border-radius:23px;width:100px" value="Edit" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
                     </div>
                 </div>
             </div>

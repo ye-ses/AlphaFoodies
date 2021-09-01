@@ -10,7 +10,7 @@
     <link href="~/Content/Dashboard.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="side-bar-nav">
+    <nav class="side-bar-nav">
         <div class="logo-content">
             <h3>Alpha Foodies</h3>
             <i class='bx bx-menu menu-btn' id="toggleBtn" onclick="toggle()"></i>
@@ -21,17 +21,14 @@
                 <a href="#">
                     <i class='bx bx-home'></i>
                     <span class="item-name">Dashboard</span>
-                </a>
-                
-                @*<span class="tool-tip">Dashboard</span>*@
+                </a>              
             </div>
 
             <div class="nav-item">
                 <a href="@Url.Action("Add_Staff","Admin")">
                     <i class='bx bx-user-plus'></i>
                     <span class="item-name">Add staff</span>
-                </a>
-                @*<span class="tool-tip">add a new staff member</span>*@
+                </a>             
             </div>
 
             <div class="nav-item">
@@ -39,7 +36,7 @@
                     <i class='bx bx-notepad'></i>
                     <span class="item-name">View chefs</span>
                 </a>
-                @*<span class="tool-tip">view chefs</span>*@
+               
             </div>
 
             <div class="nav-item">
@@ -47,7 +44,7 @@
                     <i class='bx bx-food-menu'></i>
                     <span class="item-name">Menu</span>
                 </a>
-                @*<span class="tool-tip">check menu</span>*@
+               
             </div>
 
             <div class="nav-item">
@@ -55,7 +52,7 @@
                     <i class='bx bx-add-to-queue'></i>
                     <span class="item-name">Add menu item</span>
                 </a>
-                @*<span class="tool-tip">add a new menu item</span>*@
+               
             </div>
 
             <div class="nav-item">
@@ -63,7 +60,7 @@
                     <i class='bx bx-cart'></i>
                     <span class="item-name">Order history</span>
                 </a>
-                @*<span class="tool-tip">view order history</span>*@
+               
             </div>
 
             <div class="nav-item">
@@ -71,7 +68,7 @@
                     <i class='bx bx-user'></i>
                     <span class="item-name">Profile</span>
                 </a>
-                @*<span class="tool-tip">check profile</span>*@
+                
             </div>
 
             <div class="nav-item">
@@ -112,7 +109,7 @@
                 </div>
             </div>-->
         </div>
-    </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         @*<hr />
