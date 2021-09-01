@@ -4,14 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AlphaFoodies.Models;
-
 namespace AlphaFoodies.Controllers
 {
     public class AdminController : Controller
     {
-
         private  ModelContext model = new ModelContext();
-        
+       
         [HttpGet]
         [OutputCache(Duration = 0)]
         public ActionResult AddMenuItem()
