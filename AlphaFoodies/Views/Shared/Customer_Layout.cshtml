@@ -7,16 +7,16 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/Customer.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link href="~/Content/Customer.css" rel="stylesheet" />
-    <script src="~/Scripts/Customer.js"></script>
 </head>
 <body>
     <div id="logo-container">
         <img src="~/Images/logo.png" id="logo" />
         <img src="~/Images/logo-context.png" id="logo-words" />
-        <i class='bx bx-exit' id="exit-icon"></i>  
-        <button class="btn" id="logout">exit.</button>
+        <i class='bx bx-exit' id="exit-icon"></i>   
+        @*<input  type="submit" value="exit" class="btn" id="logout"/>*@
     </div> 
     <div>
         @RenderBody()
