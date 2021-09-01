@@ -119,7 +119,7 @@ namespace AlphaFoodies.Controllers
 
             model.MenuItems.Remove(curItem);
             model.SaveChanges();
-            return Json(true, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("ViewMenu");
         }
     }
 }
