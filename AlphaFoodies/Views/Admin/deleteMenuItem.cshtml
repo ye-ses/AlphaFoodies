@@ -24,7 +24,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Price)
+                        <p><span style="line-height:27px;">R</span>@Html.DisplayFor(model=>model.Price)</p>
                     </dd>
 
                     <dt>
@@ -54,7 +54,7 @@
             {
                 @Html.AntiForgeryToken()
                 <div class="form-actions no-color">
-                   <input id="deleteItem"type="submit" style="border-radius:23px;width:100px" value="Delete" class="btn btn-danger" data-model-id="@Model.Item_Code"/>
+                   <input id="deleteItem"type="submit" style="border-radius:23px;width:100px" value="confirm" class="btn btn-danger" data-model-id="@Model.Item_Code"/>
                 </div>
             }
             </div>

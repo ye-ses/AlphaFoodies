@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
     <link href="~/Content/Admin.css" rel="stylesheet" />
 }
-
+<h3 class="alert-secondary option-titles">Menu</h3>
 <div class="view_menu_container">
     @foreach (var menuItem in Model)
     {
@@ -14,7 +14,7 @@
         if (menuItem.Picture != null)
         {
 
-            <div class="item-container " onclick="createModal('@Url.Action("details", "Admin" , new {id=menuItem.Item_Code})')">
+            <div class="item-container ">
                 <div class="imageContainer"> 
                     <img src="@image_Source" id="actual_Picture" alt="@alt_Text"/> 
                 
@@ -22,7 +22,7 @@
                 <div class="item_text"> <p class="item_name">@menuItem.Item_Name</p> <span class="price">R @menuItem.Price</span></div>
                 <div class="bottom">
                     <input type="button" class="btn btn-danger" id="deleteBtn" value="delete" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
-                    <input type="button" class="btn btn-success" id="editBtn"  value="Edit" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
+                    <input type="button" class="btn btn-danger" id="editBtn"  value="Edit" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
                 </div>
             </div>       
         }
@@ -34,7 +34,6 @@
         </div>
     </div>
 </div>
-
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script> @*/*Lib*/*@
     <script>
