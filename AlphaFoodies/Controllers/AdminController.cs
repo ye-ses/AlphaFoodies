@@ -31,7 +31,7 @@ namespace AlphaFoodies.Controllers
             }           
             model.MenuItems.Add(newItem);
             model.SaveChanges();
-            return View();
+            return RedirectToAction("ViewMenu");
         }
 
 
