@@ -35,6 +35,7 @@ namespace AlphaFoodies.Controllers
             }
             else
             {
+                TempData.Remove("c");
                 return RedirectToAction("login");
             }
         }

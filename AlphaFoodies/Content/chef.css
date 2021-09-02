@@ -25,50 +25,21 @@ textarea {
     border-collapse: collapse;
     /*text-align:center;*/
     font-size:x-large;
+    background-color:pink;
 }
-.flexcon2 {
-    display: flex;
+table tr {
+    border:2px;
+
 }
-#flex21 {
-    flex: 0.15;
-    background-color:#444648;
-    
+.trh {
+    background-color: pink;
+    border-collapse: collapse;
 }
 
-#flex22 {
-    flex: 3;
-   
-}
-
-#img,n{
-  display:inline-block;
-  
-}
-.flexcon {
-    display: flex;
-    background-color:forestgreen;
-}
-#flex0 {
-    flex: 2;
-}
-
-#flex1 {
-    flex: 0.5;
-    text-align: right;
-}
-
-#flex22 {
-    flex: 0.5;
-}
-.dnav {
-    display: inline-block;
-}
-
-
-    i {
-        font-size: 20px;
-    }
 h1{
     font-size:xx-large;
     font-weight:900;
+}
+input{
+    background-color:pink;
 }

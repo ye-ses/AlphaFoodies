@@ -183,7 +183,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\login.cshtml" />
     <Content Include="Views\Shared\Admin_Layout.cshtml" />
     <Content Include="Views\Admin\AddMenuItem.cshtml" />
     <Content Include="Views\Admin\ViewMenu.cshtml" />
