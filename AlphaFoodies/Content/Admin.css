@@ -14,23 +14,9 @@
     height: 150px;
 }
 
+
 /*Start region: View menu section*/
 
-/*.view_menu_container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.item-container {
-    display: flex;
-    margin: 10px;
-    flex-direction: column;
-    width: 350px;
-    height: 546px;
-    background: #FFFFFF;
-     box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.25);
-    padding: 15px 15px;
-}*/
 .view_menu_container {
     margin-left: 0px;
     display: flex;
@@ -53,6 +39,7 @@
 .imageContainer {
     width: 230px;
     height: 230px;
+    cursor:pointer;
 }
 
 #actual_Picture {
@@ -99,10 +86,6 @@
     font-size: 20px;
     line-height: 25px;
 }
-.card {
-    margin-right: 5px;
-}
-
 
 .bottom{
     display:flex;
@@ -119,8 +102,9 @@
     font-size: 18px;
     line-height: 27px;
 }
-#deleteBtn{
-    margin-right:35px;
+#deleteBtn {
+    margin-right: 35px;
+    background: #ff3c4a;
 }
 /*End region: View menu section*/
 /*Start Region: Delete item popup*/
@@ -133,3 +117,12 @@
 }
 
 /*End Region: Delete item popup*/
+
+.details_itemDescription {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}

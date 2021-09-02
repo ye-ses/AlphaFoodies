@@ -14,7 +14,7 @@
         if (menuItem.Picture != null)
         {
 
-            <div class="item-container ">
+            <div class="item-container " onclick="createModal('@Url.Action("details", "Admin" , new {id=menuItem.Item_Code})')">
                 <div class="imageContainer"> 
                     <img src="@image_Source" id="actual_Picture" alt="@alt_Text"/> 
                 
