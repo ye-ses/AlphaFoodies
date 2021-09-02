@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
     <link href="~/Content/Admin.css" rel="stylesheet" />
 }
-<h2>ViewMenu</h2>
+
 <div class="view_menu_container">
     @foreach (var menuItem in Model)
     {
@@ -13,23 +13,22 @@
         var alt_Text = menuItem.Item_Name;
         if (menuItem.Picture != null)
         {
-            <div class="card" style="width: 20rem; margin-right:10px;">
-                <img class="card-img-top" src="@image_Source" alt="@alt_Text" width="100%" height="200px" />
-                <div class="card-body">
-                    <h5 class="card-title text-center bol">@menuItem.Item_Name</h5>
 
-                    <p class="card-text">@menuItem.Description</p>
-                    <div class="bottom">
-                        @*<i class='bx bxs-trash-alt' id="trash_icon"></i>*@
-                        <input type="button" class="btn btn-danger" style="border-radius:23px;width:100px" value="delete" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
-                        <input type="button" class="btn btn-success" style="border-radius:23px;width:100px" value="Edit" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
-                    </div>
+            <div class="item-container " onclick="createModal('@Url.Action("details", "Admin" , new {id=menuItem.Item_Code})')">
+                <div class="imageContainer"> 
+                    <img src="@image_Source" id="actual_Picture" alt="@alt_Text"/> 
+                
+                </div>               
+                <div class="item_text"> <p class="item_name">@menuItem.Item_Name</p> <span class="price">R @menuItem.Price</span></div>
+                <div class="bottom">
+                    <input type="button" class="btn btn-danger" id="deleteBtn" value="delete" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
+                    <input type="button" class="btn btn-success" id="editBtn"  value="Edit" onclick="createModal('@Url.Action("deleteMenuItem", "Admin" , new {id=menuItem.Item_Code})')" />
                 </div>
-            </div>
+            </div>       
         }
     }
 </div>
-<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content" id="modelContent">
         </div>
@@ -39,9 +38,10 @@
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script> @*/*Lib*/*@
     <script>
-    function createModal(url){
-          $('#modelContent').load(url);
-          $('#myModal').modal('show');
-    }
+        function createModal(url) {
+            $('#modelContent').load(url);
+            $('#myModal').modal('show');
+        }
     </script>
 }
+

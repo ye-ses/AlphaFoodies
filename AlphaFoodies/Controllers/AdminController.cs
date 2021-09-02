@@ -20,11 +20,15 @@ namespace AlphaFoodies.Controllers
         [OutputCache(Duration = 0)]
         public ActionResult AddMenuItem(MenuItem newItem, HttpPostedFileBase thePicture)
         {
+            var cat = Request.Form["category"];
+            var price = Request.Form["price"];
+            newItem.Category = cat;
+            newItem.Price = decimal.Parse(price);
             if (thePicture != null)
             {     
                 newItem.Picture = new byte[thePicture.ContentLength];  //converts the image to binary
                 thePicture.InputStream.Read(newItem.Picture, 0, thePicture.ContentLength);
-            }
+            }           
             model.MenuItems.Add(newItem);
             model.SaveChanges();
             return View();
