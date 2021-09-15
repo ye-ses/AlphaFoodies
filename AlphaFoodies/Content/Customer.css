@@ -20,14 +20,18 @@ body {
     padding: 3px 8px 3px 8px;
 }
     .btn:hover {
-        color: white;
-        width: 40%;
-        height: 100%;
+        color: white; 
     }
-    .btn:focus{
-        outline:none;
-        outline:0px;
-    }  
+    .btn:focus {
+        outline: none;
+        outline: 0px;
+        color: white;
+    }
+    .btn:active {
+        outline: none;
+        outline: 0px;
+        color: white;
+    }
 #logo {
     width: 65px;
     height: 90px;
@@ -121,7 +125,7 @@ body {
 }
 #not-found{
     background-color: #d55c5c;
-    filter: opacity(0.9);
+    filter: opacity(0.8);
     border-radius: 5px;
     margin-left: 8%;
     display: inline-block; 
@@ -129,10 +133,60 @@ body {
     color: white;
     font-family: Montaga;
     padding: 3px 8px 5px 8px;
-    font-size: 17px;
+    font-size: 16px;
 }
 #not-found:hover{
     cursor:not-allowed;
+}
+#go-back {
+    background-color: #d55c5c;
+    filter: opacity(0.9);
+    border-radius: 5px;
+    margin-left: 37%;
+    max-height: 30px;
+    display: inline-block;
+    word-break: break-word;
+    color: white;
+    font-family: Montaga;
+    padding: 3px 8px 5px 8px;
+    font-size: 17px;
+}
+    #go-back a {
+        color: darkslateblue;
+    }
+#nothing-on-cart {
+    background-color: #d55c5c;
+    filter: opacity(0.9);
+    border-radius: 5px;
+    margin-left: 37%;
+    max-height: 30px;
+    display: inline-block;
+    word-break: break-word;
+    color: white;
+    font-family: Montaga;
+    padding: 3px 8px 5px 8px;
+    font-size: 17px;
+}
+#nothing-on-cart a{
+    color:darkslateblue;
+}
+.cart-inc { 
+    margin-left: 30%;
+    max-height: 25px;
+    display: inline-block;
+    word-break: break-word; 
+} 
+#quantity {
+    word-break: break-word;
+    text-wrap:normal;
+    margin-left:8px;
+    display:inline;
+    color: black;
+    max-width:30px;
+    font-family: Montaga;
+} 
+#minus{
+    margin-left:5px;
 }
 .view_menu_container {
     margin-left: 0px;
@@ -182,6 +236,10 @@ body {
     font-family: Montaga;
     line-height: 22px; 
 }
+#cart-price{
+    margin-top:6%;
+    margin-left:34%
+}
 #add-to-cart-btn {
     margin-left: 35%;
 
@@ -198,11 +256,7 @@ body {
     font-family: Montaga;
     padding: 3px 15px 5px 15px; 
     max-height:40px;
-}
-#view-cart-container:hover{
-    cursor:pointer;   
-    width:9%;   
-}
+} 
 #view-cart{
     color:white;    
     font-size:18px;  
