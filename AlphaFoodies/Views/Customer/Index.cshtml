@@ -10,8 +10,7 @@
 {
     <div class="search-container">
         @Html.TextBox("text", null, new { id = "search-box", placeholder = "enter text" })
-        <input class="btn" id="submit-btn" type="submit" value="search" />
-        @*<i class='bx bx-search-alt' id="search-icon" ></i>*@
+        <input class="btn" id="submit-btn" type="submit" value="search" /> 
     </div>
 }
 
@@ -36,8 +35,7 @@
                         <p class="price">R @menuItem.Price</p> 
                     </div>
                     <div class="btn-container">
-                        <button class="btn" id="add-to-cart-btn" type="button" onclick="location.href='@Url.Action("addItem", "Customer")'">Add to cart</button>
-                       
+                        <a class="btn" id="add-to-cart-btn"  href='@Url.Action("addItem", "Customer",new { id = menuItem.Item_Code })'>Add to cart</a> 
                     </div>
 
                 </div>
@@ -65,7 +63,7 @@
                         <p class="price">R @menuItem.Price</p>
                     </div>
                     <div class="btn-container">
-                        <button class="btn" id="add-to-cart-btn" type="button">Add to cart</button>
+                        <a class="btn" id="add-to-cart-btn" href='@Url.Action("addItem", "Customer",new { id = menuItem.Item_Code })'>Add to cart</a>
                     </div>
 
                 </div>
@@ -96,14 +94,14 @@ else
                     <p class="price">R @menuItem.Price</p>
                 </div>
                 <div class="btn-container">
-                    <button class="btn" id="add-to-cart-btn" type="button">Add to cart</button>
+                    <a class="btn" id="add-to-cart-btn" href='@Url.Action("addItem", "Customer",new { id = menuItem.Item_Code })'>Add to cart</a>
                 </div>
 
             </div>
         }
     </div>
 }
-<div class"btn" id="view-cart-container">
-    <span id="view-cart"></span>View  Cart<span><i class='bx bx-cart' id="cart-icon"></i></span>
+<div id="view-cart-container"> 
+    <a id="view-cart" href='@Url.Action("viewCart", "Customer")'>View Cart <i class='bx bx-cart' id="cart-icon"></i></a> 
 </div>
 

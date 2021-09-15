@@ -193,6 +193,7 @@
     <Content Include="Views\Admin\add_Staff.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Shared\Customer_Layout.cshtml" />
+    <Content Include="Views\Customer\viewCart.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
