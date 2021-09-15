@@ -31,6 +31,13 @@ namespace AlphaFoodies.Controllers
                 return RedirectToAction("Index");
             }
         } 
+        [HttpPost]
+        public void addItem(MenuItem curItem)
+        {
+            MenuItem item = new MenuItem();  
+            
+            context.MenuItems.Add(item);
+        }
        
     }
 }

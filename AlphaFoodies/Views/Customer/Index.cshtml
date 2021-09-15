@@ -34,9 +34,18 @@
                     <div class="item_text">
                         <p class="item_name">@menuItem.Item_Name</p>
                         <p class="price">R @menuItem.Price</p>
+                        @{
+                            TempData["name"] = menuItem.Item_Name;
+                            TempData["picture"] = menuItem ;
+                            TempData["code"] = menuItem.Item_Code;
+                            TempData["price"] = menuItem.Price;
+                            TempData["description"] = menuItem.Description;
+                            TempData["category"] = menuItem.Category;
+                        }
                     </div>
                     <div class="btn-container">
-                        <button class="btn" id="add-to-cart-btn" type="button">Add to cart</button>
+                        <button class="btn" id="add-to-cart-btn" type="button" onclick="location.href='@Url.Action("addItem", "Customer")'">Add to cart</button>
+                       
                     </div>
 
                 </div>
