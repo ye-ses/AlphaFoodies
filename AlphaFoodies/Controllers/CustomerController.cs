@@ -34,9 +34,18 @@ namespace AlphaFoodies.Controllers
         [HttpPost]
         public void addItem(MenuItem curItem)
         {
-            MenuItem item = new MenuItem();  
+            MenuItem item = new MenuItem
+            {
+                Category = curItem.Category,
+                Description = curItem.Description,
+                Item_Code = curItem.Item_Code,
+                Item_Name = curItem.Item_Name,
+                OrderItems = curItem.OrderItems,
+                Picture = curItem.Picture,
+                Price = curItem.Price
+            };
             
-            context.MenuItems.Add(item);
+            context.SaveChanges();
         }
        
     }
